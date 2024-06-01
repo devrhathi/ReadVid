@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "ReadVid",
+    "version": "1.0",
+    "description": "Generate quick video summary of a youtube video",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "content_scripts": [
+      {
+        "js": ["scripts/panel.js","scripts/gemini.js", "scripts/content.js"],
+        "matches": [
+          "https://www.youtube.com/"
+        ]
+      }
+    ],
+    "action": {
+      "default_popup": "ui/popup.html"
+    }
+  }
